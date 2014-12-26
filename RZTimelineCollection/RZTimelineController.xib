@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RZTimelineController" customModule="RZTimelineCollection" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="efj-BR-L1o" id="5DK-rA-U22"/>
+                <outlet property="toolbar" destination="DvT-Sp-ZQW" id="xMh-ZB-QMs"/>
+                <outlet property="view" destination="Qos-36-MHU" id="rLP-0X-vII"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Qos-36-MHU">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="efj-BR-L1o" customClass="RZPostCollectionView" customModule="RZTimelineCollection" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F4T-Gj-pEl" customClass="RZTimelineCollectionLayout" customModule="RZTimelineCollection" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="postContainerLeftRigthMargin">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="p2S-8b-sHG"/>
+                        <outlet property="delegate" destination="-1" id="C49-HW-hSU"/>
+                    </connections>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Sp-ZQW">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Jyb-Ee-1mo"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Czo-cY-PiN"/>
+                        <barButtonItem title="Comment" id="4Rv-06-NyI"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2ww-VA-LzZ"/>
+                        <barButtonItem title="Photo" id="tzf-Fe-gLs"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ndN-AM-ygH"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DvT-Sp-ZQW" secondAttribute="trailing" id="J7q-IW-TYo"/>
+                <constraint firstAttribute="bottom" secondItem="efj-BR-L1o" secondAttribute="bottom" id="Tl9-Ix-Ssk"/>
+                <constraint firstAttribute="bottom" secondItem="DvT-Sp-ZQW" secondAttribute="bottom" id="Z43-hK-GbM"/>
+                <constraint firstAttribute="trailing" secondItem="efj-BR-L1o" secondAttribute="trailing" id="bEi-ni-qUB"/>
+                <constraint firstItem="efj-BR-L1o" firstAttribute="leading" secondItem="Qos-36-MHU" secondAttribute="leading" id="gA8-tx-qqR"/>
+                <constraint firstItem="DvT-Sp-ZQW" firstAttribute="leading" secondItem="Qos-36-MHU" secondAttribute="leading" id="iv8-KQ-HGf"/>
+                <constraint firstItem="efj-BR-L1o" firstAttribute="top" secondItem="Qos-36-MHU" secondAttribute="top" id="ky2-I9-8vm"/>
+            </constraints>
+            <point key="canvasLocation" x="512" y="491"/>
+        </view>
+    </objects>
+</document>

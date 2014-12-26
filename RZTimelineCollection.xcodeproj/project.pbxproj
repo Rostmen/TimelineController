@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		224724221A430BE3006439A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724211A430BE3006439A5 /* AppDelegate.swift */; };
+		224724241A430BE3006439A5 /* RZTimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724231A430BE3006439A5 /* RZTimelineController.swift */; };
+		224724271A430BE3006439A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224724251A430BE3006439A5 /* Main.storyboard */; };
+		224724291A430BE3006439A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224724281A430BE3006439A5 /* Images.xcassets */; };
+		2247242C1A430BE3006439A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2247242A1A430BE3006439A5 /* LaunchScreen.xib */; };
+		224724381A430BE3006439A5 /* RZTimelineCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724371A430BE3006439A5 /* RZTimelineCollectionTests.swift */; };
+		224724421A430C2E006439A5 /* RZTimelineCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724411A430C2E006439A5 /* RZTimelineCollectionLayout.swift */; };
+		224724451A4323A0006439A5 /* RZPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224724441A4323A0006439A5 /* RZPostCollectionViewCell.xib */; };
+		224724471A4328F0006439A5 /* RZPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724461A4328F0006439A5 /* RZPostCollectionViewCell.swift */; };
+		2247244A1A432B14006439A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724491A432B14006439A5 /* Extensions.swift */; };
+		2247244C1A432BA6006439A5 /* RZPostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2247244B1A432BA6006439A5 /* RZPostLabel.swift */; };
+		2247244F1A432E61006439A5 /* RZPostCellTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2247244E1A432E61006439A5 /* RZPostCellTextView.swift */; };
+		224724541A434234006439A5 /* RZPostCollectionViewLayoutAttribures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724531A434234006439A5 /* RZPostCollectionViewLayoutAttribures.swift */; };
+		224724591A4808BB006439A5 /* RZPostCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224724581A4808BB006439A5 /* RZPostCollectionViewDataSource.swift */; };
+		2247245B1A480957006439A5 /* RZPostCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2247245A1A480957006439A5 /* RZPostCollectionView.swift */; };
+		2247245F1A482D84006439A5 /* RZPostAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2247245E1A482D84006439A5 /* RZPostAssets.bundle */; };
+		228BEAD81A485BE70064A073 /* RZPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAD71A485BE70064A073 /* RZPost.swift */; };
+		228BEADB1A4998E00064A073 /* RZPostBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEADA1A4998E00064A073 /* RZPostBackgroundImage.swift */; };
+		228BEADD1A49A0620064A073 /* RZPostImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEADC1A49A0620064A073 /* RZPostImageFactory.swift */; };
+		228BEAE21A49AEBE0064A073 /* RZTimelineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228BEAE11A49AEBE0064A073 /* RZTimelineController.xib */; };
+		228BEAE41A49C3490064A073 /* RZPostMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAE31A49C3490064A073 /* RZPostMedia.swift */; };
+		228BEAE61A49C4980064A073 /* RZPostPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAE51A49C4980064A073 /* RZPostPlaceholderView.swift */; };
+		228BEAE81A49D54F0064A073 /* RZAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAE71A49D54F0064A073 /* RZAvatar.swift */; };
+		228BEAEA1A49EC3C0064A073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAE91A49EC3C0064A073 /* ViewController.swift */; };
+		228BEAEF1A4B14B00064A073 /* StringDrawingOptions+combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAEE1A4B14B00064A073 /* StringDrawingOptions+combine.m */; };
+		228BEAF11A4B230B0064A073 /* RZDecorationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAF01A4B230B0064A073 /* RZDecorationViews.swift */; };
+		228BEAF31A4D95E90064A073 /* RZTimestampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAF21A4D95E90064A073 /* RZTimestampFormatter.swift */; };
+		228BEAF51A4D9D5A0064A073 /* RZAvatarImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BEAF41A4D9D5A0064A073 /* RZAvatarImageFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		224724321A430BE3006439A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224724141A430BE3006439A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2247241B1A430BE3006439A5;
+			remoteInfo = RZTimelineCollection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2247241C1A430BE3006439A5 /* RZTimelineCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RZTimelineCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224724201A430BE3006439A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224724211A430BE3006439A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		224724231A430BE3006439A5 /* RZTimelineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZTimelineController.swift; sourceTree = "<group>"; };
+		224724261A430BE3006439A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		224724281A430BE3006439A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2247242B1A430BE3006439A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		224724311A430BE3006439A5 /* RZTimelineCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RZTimelineCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		224724361A430BE3006439A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224724371A430BE3006439A5 /* RZTimelineCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZTimelineCollectionTests.swift; sourceTree = "<group>"; };
+		224724411A430C2E006439A5 /* RZTimelineCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZTimelineCollectionLayout.swift; sourceTree = "<group>"; };
+		224724441A4323A0006439A5 /* RZPostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RZPostCollectionViewCell.xib; sourceTree = "<group>"; };
+		224724461A4328F0006439A5 /* RZPostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		224724491A432B14006439A5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2247244B1A432BA6006439A5 /* RZPostLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostLabel.swift; sourceTree = "<group>"; };
+		2247244E1A432E61006439A5 /* RZPostCellTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostCellTextView.swift; sourceTree = "<group>"; };
+		224724531A434234006439A5 /* RZPostCollectionViewLayoutAttribures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostCollectionViewLayoutAttribures.swift; sourceTree = "<group>"; };
+		224724581A4808BB006439A5 /* RZPostCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		2247245A1A480957006439A5 /* RZPostCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostCollectionView.swift; sourceTree = "<group>"; };
+		2247245E1A482D84006439A5 /* RZPostAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RZPostAssets.bundle; sourceTree = "<group>"; };
+		228BEAD71A485BE70064A073 /* RZPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPost.swift; sourceTree = "<group>"; };
+		228BEADA1A4998E00064A073 /* RZPostBackgroundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostBackgroundImage.swift; sourceTree = "<group>"; };
+		228BEADC1A49A0620064A073 /* RZPostImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostImageFactory.swift; sourceTree = "<group>"; };
+		228BEAE11A49AEBE0064A073 /* RZTimelineController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RZTimelineController.xib; sourceTree = "<group>"; };
+		228BEAE31A49C3490064A073 /* RZPostMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostMedia.swift; sourceTree = "<group>"; };
+		228BEAE51A49C4980064A073 /* RZPostPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZPostPlaceholderView.swift; sourceTree = "<group>"; };
+		228BEAE71A49D54F0064A073 /* RZAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZAvatar.swift; sourceTree = "<group>"; };
+		228BEAE91A49EC3C0064A073 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		228BEAEC1A4B14AF0064A073 /* RZTimelineCollection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RZTimelineCollection-Bridging-Header.h"; sourceTree = "<group>"; };
+		228BEAED1A4B14B00064A073 /* StringDrawingOptions+combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StringDrawingOptions+combine.h"; sourceTree = "<group>"; };
+		228BEAEE1A4B14B00064A073 /* StringDrawingOptions+combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StringDrawingOptions+combine.m"; sourceTree = "<group>"; };
+		228BEAF01A4B230B0064A073 /* RZDecorationViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZDecorationViews.swift; sourceTree = "<group>"; };
+		228BEAF21A4D95E90064A073 /* RZTimestampFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZTimestampFormatter.swift; sourceTree = "<group>"; };
+		228BEAF41A4D9D5A0064A073 /* RZAvatarImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RZAvatarImageFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		224724191A430BE3006439A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2247242E1A430BE3006439A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224724131A430BE3006439A5 = {
+			isa = PBXGroup;
+			children = (
+				2247241E1A430BE3006439A5 /* RZTimelineCollection */,
+				224724341A430BE3006439A5 /* RZTimelineCollectionTests */,
+				2247241D1A430BE3006439A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2247241D1A430BE3006439A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2247241C1A430BE3006439A5 /* RZTimelineCollection.app */,
+				224724311A430BE3006439A5 /* RZTimelineCollectionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2247241E1A430BE3006439A5 /* RZTimelineCollection */ = {
+			isa = PBXGroup;
+			children = (
+				2247245E1A482D84006439A5 /* RZPostAssets.bundle */,
+				228BEAEB1A4B14270064A073 /* Objective-C bridge */,
+				228BEAD91A498CB00064A073 /* Factory */,
+				224724551A4805DC006439A5 /* Model */,
+				224724521A434204006439A5 /* Layout */,
+				2247244D1A432BAC006439A5 /* Views */,
+				224724481A432B00006439A5 /* Extensions */,
+				224724431A432362006439A5 /* Cells */,
+				224724211A430BE3006439A5 /* AppDelegate.swift */,
+				228BEAE91A49EC3C0064A073 /* ViewController.swift */,
+				224724251A430BE3006439A5 /* Main.storyboard */,
+				224724281A430BE3006439A5 /* Images.xcassets */,
+				2247242A1A430BE3006439A5 /* LaunchScreen.xib */,
+				2247241F1A430BE3006439A5 /* Supporting Files */,
+			);
+			path = RZTimelineCollection;
+			sourceTree = "<group>";
+		};
+		2247241F1A430BE3006439A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				224724201A430BE3006439A5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224724341A430BE3006439A5 /* RZTimelineCollectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				224724371A430BE3006439A5 /* RZTimelineCollectionTests.swift */,
+				224724351A430BE3006439A5 /* Supporting Files */,
+			);
+			path = RZTimelineCollectionTests;
+			sourceTree = "<group>";
+		};
+		224724351A430BE3006439A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				224724361A430BE3006439A5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224724431A432362006439A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		224724481A432B00006439A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				224724491A432B14006439A5 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2247244D1A432BAC006439A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				228BEAE11A49AEBE0064A073 /* RZTimelineController.xib */,
+				224724231A430BE3006439A5 /* RZTimelineController.swift */,
+				2247244B1A432BA6006439A5 /* RZPostLabel.swift */,
+				224724441A4323A0006439A5 /* RZPostCollectionViewCell.xib */,
+				224724461A4328F0006439A5 /* RZPostCollectionViewCell.swift */,
+				2247244E1A432E61006439A5 /* RZPostCellTextView.swift */,
+				2247245A1A480957006439A5 /* RZPostCollectionView.swift */,
+				228BEAE51A49C4980064A073 /* RZPostPlaceholderView.swift */,
+				228BEAF01A4B230B0064A073 /* RZDecorationViews.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		224724521A434204006439A5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				224724531A434234006439A5 /* RZPostCollectionViewLayoutAttribures.swift */,
+				224724411A430C2E006439A5 /* RZTimelineCollectionLayout.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		224724551A4805DC006439A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				224724581A4808BB006439A5 /* RZPostCollectionViewDataSource.swift */,
+				228BEADA1A4998E00064A073 /* RZPostBackgroundImage.swift */,
+				228BEAD71A485BE70064A073 /* RZPost.swift */,
+				228BEAE31A49C3490064A073 /* RZPostMedia.swift */,
+				228BEAE71A49D54F0064A073 /* RZAvatar.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		228BEAD91A498CB00064A073 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				228BEADC1A49A0620064A073 /* RZPostImageFactory.swift */,
+				228BEAF21A4D95E90064A073 /* RZTimestampFormatter.swift */,
+				228BEAF41A4D9D5A0064A073 /* RZAvatarImageFactory.swift */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		228BEAEB1A4B14270064A073 /* Objective-C bridge */ = {
+			isa = PBXGroup;
+			children = (
+				228BEAED1A4B14B00064A073 /* StringDrawingOptions+combine.h */,
+				228BEAEE1A4B14B00064A073 /* StringDrawingOptions+combine.m */,
+				228BEAEC1A4B14AF0064A073 /* RZTimelineCollection-Bridging-Header.h */,
+			);
+			name = "Objective-C bridge";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2247241B1A430BE3006439A5 /* RZTimelineCollection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2247243B1A430BE3006439A5 /* Build configuration list for PBXNativeTarget "RZTimelineCollection" */;
+			buildPhases = (
+				224724181A430BE3006439A5 /* Sources */,
+				224724191A430BE3006439A5 /* Frameworks */,
+				2247241A1A430BE3006439A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RZTimelineCollection;
+			productName = RZTimelineCollection;
+			productReference = 2247241C1A430BE3006439A5 /* RZTimelineCollection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		224724301A430BE3006439A5 /* RZTimelineCollectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2247243E1A430BE3006439A5 /* Build configuration list for PBXNativeTarget "RZTimelineCollectionTests" */;
+			buildPhases = (
+				2247242D1A430BE3006439A5 /* Sources */,
+				2247242E1A430BE3006439A5 /* Frameworks */,
+				2247242F1A430BE3006439A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224724331A430BE3006439A5 /* PBXTargetDependency */,
+			);
+			name = RZTimelineCollectionTests;
+			productName = RZTimelineCollectionTests;
+			productReference = 224724311A430BE3006439A5 /* RZTimelineCollectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		224724141A430BE3006439A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Rozdoum;
+				TargetAttributes = {
+					2247241B1A430BE3006439A5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					224724301A430BE3006439A5 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2247241B1A430BE3006439A5;
+					};
+				};
+			};
+			buildConfigurationList = 224724171A430BE3006439A5 /* Build configuration list for PBXProject "RZTimelineCollection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 224724131A430BE3006439A5;
+			productRefGroup = 2247241D1A430BE3006439A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2247241B1A430BE3006439A5 /* RZTimelineCollection */,
+				224724301A430BE3006439A5 /* RZTimelineCollectionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2247241A1A430BE3006439A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224724271A430BE3006439A5 /* Main.storyboard in Resources */,
+				2247245F1A482D84006439A5 /* RZPostAssets.bundle in Resources */,
+				2247242C1A430BE3006439A5 /* LaunchScreen.xib in Resources */,
+				224724451A4323A0006439A5 /* RZPostCollectionViewCell.xib in Resources */,
+				224724291A430BE3006439A5 /* Images.xcassets in Resources */,
+				228BEAE21A49AEBE0064A073 /* RZTimelineController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2247242F1A430BE3006439A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224724181A430BE3006439A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2247244A1A432B14006439A5 /* Extensions.swift in Sources */,
+				2247245B1A480957006439A5 /* RZPostCollectionView.swift in Sources */,
+				224724541A434234006439A5 /* RZPostCollectionViewLayoutAttribures.swift in Sources */,
+				224724241A430BE3006439A5 /* RZTimelineController.swift in Sources */,
+				228BEADD1A49A0620064A073 /* RZPostImageFactory.swift in Sources */,
+				224724221A430BE3006439A5 /* AppDelegate.swift in Sources */,
+				228BEAF51A4D9D5A0064A073 /* RZAvatarImageFactory.swift in Sources */,
+				224724471A4328F0006439A5 /* RZPostCollectionViewCell.swift in Sources */,
+				228BEADB1A4998E00064A073 /* RZPostBackgroundImage.swift in Sources */,
+				2247244C1A432BA6006439A5 /* RZPostLabel.swift in Sources */,
+				224724591A4808BB006439A5 /* RZPostCollectionViewDataSource.swift in Sources */,
+				228BEAE61A49C4980064A073 /* RZPostPlaceholderView.swift in Sources */,
+				228BEAEA1A49EC3C0064A073 /* ViewController.swift in Sources */,
+				228BEAD81A485BE70064A073 /* RZPost.swift in Sources */,
+				2247244F1A432E61006439A5 /* RZPostCellTextView.swift in Sources */,
+				228BEAEF1A4B14B00064A073 /* StringDrawingOptions+combine.m in Sources */,
+				228BEAE81A49D54F0064A073 /* RZAvatar.swift in Sources */,
+				228BEAF11A4B230B0064A073 /* RZDecorationViews.swift in Sources */,
+				228BEAF31A4D95E90064A073 /* RZTimestampFormatter.swift in Sources */,
+				228BEAE41A49C3490064A073 /* RZPostMedia.swift in Sources */,
+				224724421A430C2E006439A5 /* RZTimelineCollectionLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2247242D1A430BE3006439A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224724381A430BE3006439A5 /* RZTimelineCollectionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224724331A430BE3006439A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2247241B1A430BE3006439A5 /* RZTimelineCollection */;
+			targetProxy = 224724321A430BE3006439A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		224724251A430BE3006439A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224724261A430BE3006439A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2247242A1A430BE3006439A5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2247242B1A430BE3006439A5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		224724391A430BE3006439A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2247243A1A430BE3006439A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2247243C1A430BE3006439A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RZTimelineCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RZTimelineCollection/RZTimelineCollection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2247243D1A430BE3006439A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RZTimelineCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RZTimelineCollection/RZTimelineCollection-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2247243F1A430BE3006439A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RZTimelineCollectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RZTimelineCollection.app/RZTimelineCollection";
+			};
+			name = Debug;
+		};
+		224724401A430BE3006439A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RZTimelineCollectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RZTimelineCollection.app/RZTimelineCollection";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224724171A430BE3006439A5 /* Build configuration list for PBXProject "RZTimelineCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224724391A430BE3006439A5 /* Debug */,
+				2247243A1A430BE3006439A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2247243B1A430BE3006439A5 /* Build configuration list for PBXNativeTarget "RZTimelineCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2247243C1A430BE3006439A5 /* Debug */,
+				2247243D1A430BE3006439A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2247243E1A430BE3006439A5 /* Build configuration list for PBXNativeTarget "RZTimelineCollectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2247243F1A430BE3006439A5 /* Debug */,
+				224724401A430BE3006439A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 224724141A430BE3006439A5 /* Project object */;
+}

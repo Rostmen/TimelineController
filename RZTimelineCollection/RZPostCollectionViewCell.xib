@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RNg-yg-VIU" customClass="RZPostCollectionViewCell" customModule="RZTimelineCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell top label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4La-me-OYw" customClass="RZPostLabel" customModule="RZTimelineCollection" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="zlf-ig-cva"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wK-ze-fML" customClass="RZPostLabel" customModule="RZTimelineCollection" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="117" width="320" height="21"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="THp-ry-I3X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPH-Zf-Ag0">
+                        <rect key="frame" x="50" y="21" width="270" height="96"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36B-Eq-bEH">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="96"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZF-s6-TCk" customClass="RZPostCellTextView" customModule="RZTimelineCollection" customModuleProvider="target">
+                                <rect key="frame" x="6" y="0.0" width="264" height="96"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="36B-Eq-bEH" secondAttribute="trailing" id="6f7-bH-Ig6"/>
+                            <constraint firstItem="36B-Eq-bEH" firstAttribute="leading" secondItem="VPH-Zf-Ag0" secondAttribute="leading" id="9gp-SE-3Wd"/>
+                            <constraint firstAttribute="bottom" secondItem="36B-Eq-bEH" secondAttribute="bottom" id="Hk0-ah-5kg"/>
+                            <constraint firstAttribute="bottom" secondItem="mZF-s6-TCk" secondAttribute="bottom" id="Pjf-7W-eQV"/>
+                            <constraint firstAttribute="trailing" secondItem="mZF-s6-TCk" secondAttribute="trailing" id="SH2-B6-Fm1"/>
+                            <constraint firstItem="mZF-s6-TCk" firstAttribute="top" secondItem="VPH-Zf-Ag0" secondAttribute="top" id="Sq3-0K-tYt"/>
+                            <constraint firstItem="36B-Eq-bEH" firstAttribute="top" secondItem="VPH-Zf-Ag0" secondAttribute="top" id="TlF-dv-4Wc"/>
+                            <constraint firstAttribute="width" constant="270" id="cPo-n2-w1w"/>
+                            <constraint firstItem="mZF-s6-TCk" firstAttribute="leading" secondItem="VPH-Zf-Ag0" secondAttribute="leading" constant="6" id="kK7-V0-qGh"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naz-Pi-FAP">
+                        <rect key="frame" x="0.0" y="21" width="50" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uja-b7-qYF">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ZZa-sY-32A"/>
+                            <constraint firstAttribute="height" constant="50" id="eaD-dZ-09Y"/>
+                            <constraint firstItem="Uja-b7-qYF" firstAttribute="leading" secondItem="naz-Pi-FAP" secondAttribute="leading" id="jA6-du-mRJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Uja-b7-qYF" secondAttribute="trailing" id="k6W-8w-Z3G"/>
+                            <constraint firstItem="Uja-b7-qYF" firstAttribute="top" secondItem="naz-Pi-FAP" secondAttribute="top" id="s8m-pG-rwx"/>
+                            <constraint firstAttribute="bottom" secondItem="Uja-b7-qYF" secondAttribute="bottom" id="tpQ-Kb-S2k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4La-me-OYw" secondAttribute="trailing" id="EVG-NY-Nh0"/>
+                <constraint firstItem="VPH-Zf-Ag0" firstAttribute="top" secondItem="4La-me-OYw" secondAttribute="bottom" id="PgZ-9F-cEk"/>
+                <constraint firstItem="VPH-Zf-Ag0" firstAttribute="leading" secondItem="naz-Pi-FAP" secondAttribute="trailing" id="TH6-U9-0Jt"/>
+                <constraint firstAttribute="trailing" secondItem="0wK-ze-fML" secondAttribute="trailing" id="Wh9-pt-QaU"/>
+                <constraint firstAttribute="bottom" secondItem="0wK-ze-fML" secondAttribute="bottom" id="al6-0f-cRK"/>
+                <constraint firstItem="naz-Pi-FAP" firstAttribute="leading" secondItem="RNg-yg-VIU" secondAttribute="leading" id="bHJ-Gu-jUJ"/>
+                <constraint firstItem="0wK-ze-fML" firstAttribute="top" secondItem="VPH-Zf-Ag0" secondAttribute="bottom" id="ho4-Uz-zU4"/>
+                <constraint firstItem="naz-Pi-FAP" firstAttribute="top" secondItem="4La-me-OYw" secondAttribute="bottom" id="jf3-hG-vd9"/>
+                <constraint firstItem="4La-me-OYw" firstAttribute="top" secondItem="RNg-yg-VIU" secondAttribute="top" id="mff-IX-IXS"/>
+                <constraint firstItem="0wK-ze-fML" firstAttribute="leading" secondItem="RNg-yg-VIU" secondAttribute="leading" id="pJ0-uL-9qf"/>
+                <constraint firstItem="4La-me-OYw" firstAttribute="leading" secondItem="RNg-yg-VIU" secondAttribute="leading" id="rIZ-GA-TG7"/>
+            </constraints>
+            <size key="customSize" width="320" height="138"/>
+            <connections>
+                <outlet property="avatarContainerView" destination="naz-Pi-FAP" id="Z5l-LF-j2T"/>
+                <outlet property="avatarContainerViewHeightConstraint" destination="eaD-dZ-09Y" id="2mc-bu-G8r"/>
+                <outlet property="avatarContainerViewWidthConstraint" destination="ZZa-sY-32A" id="crd-MN-648"/>
+                <outlet property="avatarImageView" destination="Uja-b7-qYF" id="jgG-Et-M7R"/>
+                <outlet property="cellBottomLabel" destination="0wK-ze-fML" id="5fB-5A-zux"/>
+                <outlet property="cellBottomLabelHeightConstraint" destination="THp-ry-I3X" id="1Vi-t2-Hgn"/>
+                <outlet property="cellTopLabel" destination="4La-me-OYw" id="SB3-8a-1Y4"/>
+                <outlet property="cellTopLabelHeightConstraint" destination="zlf-ig-cva" id="qwe-Aa-ZHU"/>
+                <outlet property="postBackgroundImageView" destination="36B-Eq-bEH" id="qoH-ZE-9CF"/>
+                <outlet property="postContainerView" destination="VPH-Zf-Ag0" id="XlQ-zD-7mn"/>
+                <outlet property="postContainerWidthConstraint" destination="cPo-n2-w1w" id="wLL-9n-fQK"/>
+                <outlet property="textView" destination="mZF-s6-TCk" id="JEQ-HA-RCt"/>
+                <outlet property="textViewAvatarHorizontalSpaceConstraint" destination="kK7-V0-qGh" id="hUd-tO-5gh"/>
+                <outlet property="textViewBottomVerticalSpaceConstraint" destination="Pjf-7W-eQV" id="hy3-HP-nn0"/>
+                <outlet property="textViewMarginHorizontalSpaceConstraint" destination="SH2-B6-Fm1" id="fM9-VN-mE3"/>
+                <outlet property="textViewTopVerticalSpaceConstraint" destination="Sq3-0K-tYt" id="Y32-eR-7WK"/>
+            </connections>
+            <point key="canvasLocation" x="572" y="512"/>
+        </collectionViewCell>
+    </objects>
+</document>
