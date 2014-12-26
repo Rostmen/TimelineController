@@ -28,9 +28,6 @@ class ViewController: RZTimelineController {
             
             
         }
-
-        
-        
     }
     
     func randomStringWithLength (len : Int) -> NSString {

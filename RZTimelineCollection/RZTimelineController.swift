@@ -38,16 +38,20 @@ class RZTimelineController: UIViewController, RZPostCollectionViewDataSource, RZ
     class func nib() -> UINib {
         return UINib(nibName: "RZTimelineController", bundle: NSBundle.mainBundle())
     }
-    
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        self.configureCollectionView()
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         RZTimelineController.nib().instantiateWithOwner(self, options: nil)
-        self.configureCollectionView()
+        configureCollectionView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        (collectionView.collectionViewLayout as RZTimelineCollectionLayout).mode = .Center
+    }
+
+    override func viewWillLayoutSubviews() {
+        (collectionView.collectionViewLayout as RZTimelineCollectionLayout).invalidateLayout()
     }
     
     func configureCollectionView() {

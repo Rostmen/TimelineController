@@ -11,10 +11,16 @@ import UIKit
 let kPostCollectionViewAvatarSizeDefault: CGFloat = 30
 let RZCollectionElementKindTimeLine = "CollectionElementKindTimeLine"
 
+enum RZTimelineMode: Int {
+    case Left
+    case Center
+    case Right
+}
+
 class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
    
-    private var _postsCache: NSCache!
-
+    private var _postsCacheSizes: NSCache!
+    private var _postsCacheAttribures: NSCache!
     
     override var collectionView: RZPostCollectionView? {
         get {
@@ -32,6 +38,9 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
     var timelineInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     var timelineXPosition: CGFloat = 0
     
+
+    var mode = RZTimelineMode.Left
+    
     private var _decorationViewsCache: NSCache!
     
     private var _dynamicAnimator: UIDynamicAnimator!
@@ -41,9 +50,13 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
         sectionInset = UIEdgeInsetsMake(10, 4, 10, 4)
         minimumLineSpacing = 4
         
-        _postsCache = NSCache()
-        _postsCache.name = "RZTimelineCollectionLayout.postsCache"
-        _postsCache.countLimit = 200
+        _postsCacheSizes = NSCache()
+        _postsCacheSizes.name = "RZTimelineCollectionLayout.postsCacheSized"
+        _postsCacheSizes.countLimit = 200
+        
+        _postsCacheAttribures = NSCache()
+        _postsCacheAttribures.name = "RZTimelineCollectionLayout.postsCacheAttributes"
+        _postsCacheAttribures.countLimit = 50
         
         _decorationViewsCache = NSCache()
         _decorationViewsCache.name = "RZTimelineCollectionLayout.decorationsCache"
@@ -51,6 +64,7 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
         
         //_dynamicAnimator = UIDynamicAnimator(collectionViewLayout: self)
     }
+    
     
     override init() {
         super.init()
@@ -71,12 +85,18 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
     }
     
     func itemWidth() -> CGFloat {
-        return collectionView!.frame.size.width - sectionInset.left - sectionInset.right - timelineInsets.left - timelineXPosition
+
+        return collectionView!.frame.size.width - sectionInset.left - sectionInset.right - timelineInsets.left - timelineInsets.right - timelineXPosition
     }
     
     override func prepareLayout() {
         super.prepareLayout()
         
+    }
+    
+    override func invalidateLayout() {
+        super.invalidateLayout()
+        _postsCacheSizes.removeAllObjects()
     }
     
     override func finalizeCollectionViewUpdates() {
@@ -98,7 +118,7 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
                 if attributesItem.representedElementCategory == UICollectionElementCategory.Cell {
                     configurePostCellLayoutAttributes(attributesItem as RZPostCollectionViewLayoutAttribures)
                 } else {
-                    attributesItem.frame = CGRect(x: timelineXPosition + timelineInsets.left, y: collectionView!.contentOffset.y, width: 1, height: collectionView!.frame.size.height)
+                    attributesItem.frame = CGRect(x: timelineXPosition + timelineInsets.left - timelineInsets.right, y: collectionView!.contentOffset.y, width: 1, height: collectionView!.frame.size.height)
                     attributesItem.zIndex = 0
                 }
             }
@@ -122,7 +142,7 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
         layoutAttributes.cellTopLabelHeight = (collectionView?.delegate as RZPostCollectionViewDelegateFlowLayout).collectionView(collectionView!, layout: self , heightForCellTopLabelAtIndexPath: indexPath)
         layoutAttributes.cellBottomLabelHeight = (collectionView?.delegate as RZPostCollectionViewDelegateFlowLayout).collectionView(collectionView!, layout: self , heightForCellBottomLabelAtIndexPath: indexPath)
         layoutAttributes.frame = CGRect(
-            x: timelineXPosition + timelineInsets.left - (avatarSize.width / 2),
+            x: timelineXPosition + timelineInsets.left - (avatarSize.width / 2) - timelineInsets.right,
             y: CGRectGetMinY(layoutAttributes.frame),
             width: CGRectGetWidth(layoutAttributes.frame),
             height: CGRectGetHeight(layoutAttributes.frame))
@@ -152,6 +172,7 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
     }
     
     override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+
         return true
     }
     
@@ -188,13 +209,13 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
     }
     
     func resetLayout() {
-        _postsCache.removeAllObjects()
+        _postsCacheSizes.removeAllObjects()
         _decorationViewsCache.removeAllObjects()
     }
     
     func cellSizeForItemAtIndexPath(indexPath: NSIndexPath) -> CGSize {
         let post = (collectionView?.dataSource as RZPostCollectionViewDataSource).collectionView(collectionView!, postDataForIndexPath: indexPath)
-        if let  cachedSize = _postsCache.objectForKey(post.hash) as? NSValue {
+        if let  cachedSize = _postsCacheSizes.objectForKey(post.hash) as? NSValue {
             return cachedSize.CGSizeValue()
         } else {
             var finalSize = CGSizeZero
@@ -220,7 +241,7 @@ class RZTimelineCollectionLayout: UICollectionViewFlowLayout {
                 finalSize = CGSize(width: finalWidth, height: stringSize.height + verticalInsets)
             }
             
-            _postsCache.setObject(NSValue(CGSize: finalSize), forKey: post.hash)
+            _postsCacheSizes.setObject(NSValue(CGSize: finalSize), forKey: post.hash)
             return finalSize
         }
     }
